@@ -116,6 +116,12 @@ strong { font-weight: var(--fw-bold) }
   &--intro {
     display: inline-block;
   }
+
+  &--work {
+    color: var(--color-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+  }
 }
 
 /* header */
@@ -254,6 +260,42 @@ nav { display: none }
     width: calc(100% + 2em);
     padding-left: 1em;
     padding-right: calc(200px + 4em);
+  }
+}
+
+/* My Work */
+.my-work {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  text-align: center;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  &__item {
+    background-color: var(--color-accent);
+    overflow: hidden;
+    &:focus {
+      position: relative;
+      z-index: 2;    
+    
+      .portfolio__img {
+        transform: scale(1.2);
+        opacity: .5;
+      }
+    }
+  }
+
+  &__img {
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
+                opacity 250ms linear;
+    
+    &:hover {
+      transform: scale(1.2);
+      opacity: .5;
+    }
   }
 }
 
