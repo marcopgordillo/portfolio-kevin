@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Jane Smith</title>
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- My Styles -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Vue petite -->
+    <script src="https://unpkg.com/petite-vue" defer init></script>
+</head>
+<body v-scope="{}">
+  <header>
+    <div class="logo">
+      <img src="assets/img/devjane.png" alt="">
+    </div>
+    <button class="nav-toogle" aria-label="toggle navigation">
+      <span class="hamburger"></span>
+    </button>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+        <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Intro Section -->
+  <section class="intro" id="home">
+    <h1 class="section__title section__title--intro">
+      Hi, I am <strong>Jane Smith</strong>
+    </h1>
+    <p class="section__subtitle section__subtitle--intro">Front-End Dev</p>
+    <img src="assets/img/dev-jane-01.jpg" class="intro__img" alt="A picture of Jane Smith smiling">
+  </section>
+
+  <!-- My Services -->
+  <section class="my-services" id="services">
+    <h2 class="section__title section__title--services">What I do</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Design + Development</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio voluptates ea quis voluptatem officia qui reprehenderit. Ipsa ea, veritatis excepturi praesentium laborum corrupti. Temporibus quos qui voluptatibus accusamus commodi nesciunt.</p>
+      </div><!-- .service -->
+      <div class="service">
+        <h3>E-Commerce</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus cumque architecto voluptas consequuntur rerum, accusantium eum veniam minus, sapiente rem ad. Vel possimus officiis, est quasi iste repudiandae consequuntur veniam.</p>
+      </div><!-- .service -->
+      <div class="service">
+        <h3>Wordpress</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ullam, aliquid totam necessitatibus magnam ipsam iure? Deleniti ducimus deserunt hic fugit! Obcaecati inventore dolore sint? Reiciendis in doloremque aut autem.</p>
+      </div><!-- .service -->
+    </div><!-- .services -->
+    <a href="#work" class="btn">My Work</a>
+  </section>
+
+  <!-- About Me -->
+  <section class="about-me" id="about">
+    <h2 class="section__title section__title--about">Who I am</h2>
+    <p class="section__subtitle section__subtitle--about">Designer & Developer based out of NYC</p>
+    <div class="about-me__body">
+      <p></p>
+      <p></p>
+    </div>
+    <img src="assets/img/dev-jane-02.jpg" alt="Jane learnint about a bus" />
+  </section>
+  
+  <!-- My Services -->
+  <section class="my-work" id="work">
+    <h2 class="section__title">My Work</h2>
+    <p class="section__subtitle"></p>
+    <div class="portfolio">
+      <a href="#" class="portfolio__item">
+        <img src="assets/img/portfolio-01.jpg" class="portfolio__img" alt="" />
+      </a>
+    </div><!-- .portfolio -->
+    <div class="portfolio">
+      <a href="#" class="portfolio__item">
+        <img src="assets/img/portfolio-02.jpg" class="portfolio__img" alt="" />
+      </a>
+    </div><!-- .portfolio -->
+    <div class="portfolio">
+      <a href="#" class="portfolio__item">
+        <img src="assets/img/portfolio-03.jpg" class="portfolio__img" alt="" />
+      </a>
+    </div><!-- .portfolio -->
+    <div class="portfolio">
+      <a href="#" class="portfolio__item">
+        <img src="assets/img/portfolio-04.jpg" class="portfolio__img" alt="" />
+      </a>
+    </div><!-- .portfolio -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <a href="mailto:hello@jane.dev" class="footer__link">hello@jane.dev</a>
+    <ul class="social-list">
+      <li class="social-list__item">
+        <a href="https://codepen.io" class="social-list__link"><i class="fa-brands fa-codepen"></i></a>
+      </li>
+      <li class="social-list__item">
+        <a href="https://dribbble.com" class="social-list__link"><i class="fa-brands fa-dribbble"></i></a>
+      </li>
+      <li class="social-list__item">
+        <a href="https://twitter.com" class="social-list__link"><i class="fa-brands fa-twitter"></i></a>
+      </li>
+      <li class="social-list__item">
+        <a href="https://github.com" class="social-list__link"><i class="fa-brands fa-github"></i></a>
+      </li>
+    </ul>
+  </footer>
+</body>
+</html>
