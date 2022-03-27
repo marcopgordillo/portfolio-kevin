@@ -25,10 +25,23 @@ $bs: .25em .25em .75em rgba(0,0,0,.25),
   --bs: #{$bs};
 }
 
+@media screen and (min-width: 800px) {
+  :root {
+    --fs-h1: #{4.5 * $fs-body};
+    --fs-h2: #{3.5 * $fs-body};
+    --fs-h3: #{1.5 * $fs-body};
+    --fs-body: #{1.125 * $fs-body};    
+  }
+}
+
 *,
 ::before,
 ::after {
   box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -170,17 +183,35 @@ header {
       color: var(--color-accent);
     }
   }
-}
 
-.nav-toggle {
-  padding: .5em;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  position: absolute;
-  right: 1em;
-  top: 1em;
-  z-index: 1000;
+  &-toggle {
+    padding: .5em;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+  }
+
+  &-open {
+    .nav { transform: translateX(0) }
+
+    .nav-toggle { position: fixed }
+
+    .hamburger {
+      transform: rotate(.625turn);
+
+      &::before {
+        transform: rotate(90deg) translateX(-6px);
+      }
+
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
 }
 
 .hamburger {
@@ -417,14 +448,5 @@ header {
 
   &__link {
     padding: .5em;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  :root {
-    --fs-h1: #{4.5 * $fs-body};
-    --fs-h2: #{3.5 * $fs-body};
-    --fs-h3: #{1.5 * $fs-body};
-    --fs-body: #{1.125 * $fs-body};    
   }
 }
